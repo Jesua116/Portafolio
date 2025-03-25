@@ -41,3 +41,7 @@ body {
   header nav a:visited {
     color: #fff;               /* mismo color que normal */
   }
+
+  .typed-cursor {
+    color: #000000; /* Cambia este color al que prefieras, ej. blanco #ffffff */
+  }

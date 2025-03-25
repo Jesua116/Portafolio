@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #000; /* Mismo color que el body, 
+  background-color: #000000; /* Mismo color que el body, 
                              o podrías omitirlo si ya es #000 */
 }
 
@@ -63,7 +63,7 @@ body {
   margin: 0 0 1rem 0;
   font-weight: normal;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .hero-content p {
   font-size: 1.1rem;

@@ -2,17 +2,16 @@
   <!-- Columna Imagen -->
   <div class="hero-image">
     <!-- Placeholder de 800x600, puedes cambiarlo según necesites -->
-    <img src="assets/images/hero.png" alt="Hero" class="fade-in-img" />
+    <img src="assets/images/hero.png" alt="Hero" class="fade-in-img" @fadeIn />
   </div>
 
   <!-- Columna Texto -->
   <div class="hero-content">
-    <h2 class="typing-title">PORTFOLIO</h2>
-    <h3>Jesuá Santes | Web Developer </h3>
-    <!-- <p>
-      Aquí un subtítulo o frase corta que capture la esencia de tu portafolio.
-      Más tarde podrás expandir con un texto más elaborado.
-    </p> -->
+    <h2 class="typing-title" #typedRef1></h2>
+    <h3>
+      <span #typedRef2 ></span>
+      <span #typedRef3></span>
+    </h3>
   </div>
 </section>
 
