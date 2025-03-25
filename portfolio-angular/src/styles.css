@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000; /* Si quieres que toda la página sea negra */
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, .title {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 999; /* Queda por encima del contenido */
+  }
+
+  header nav a {
+    color: #fff;               /* color normal */
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  header nav a:hover {
+    color: #0046ff;            /* hover en azul eléctrico */
+  }
+  
+  /* Evita el morado de visited */
+  header nav a:visited {
+    color: #fff;               /* mismo color que normal */
+  }

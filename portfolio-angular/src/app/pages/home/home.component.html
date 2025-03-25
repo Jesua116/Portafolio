@@ -1,2 +1,167 @@
-<h2>Bienvenido a mi Portafolio</h2>
-<p>Aquí verás una introducción rápida o un hero con CTA.</p>
+<section id="hero" class="hero">
+  <!-- Columna Imagen -->
+  <div class="hero-image">
+    <!-- Placeholder de 800x600, puedes cambiarlo según necesites -->
+    <img src="assets/images/hero.png" alt="Hero" class="fade-in-img" />
+  </div>
+
+  <!-- Columna Texto -->
+  <div class="hero-content">
+    <h2 class="typing-title">PORTFOLIO</h2>
+    <h3>Jesuá Santes | Web Developer </h3>
+    <!-- <p>
+      Aquí un subtítulo o frase corta que capture la esencia de tu portafolio.
+      Más tarde podrás expandir con un texto más elaborado.
+    </p> -->
+  </div>
+</section>
+
+<!-- Sección ABOUT -->
+<section id="about" class="about-section">
+  <!-- Título principal y subtítulo -->
+  <div class="about-heading">
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p class="subtitle">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper tristique massa, quis fringilla massa sagittis id. Proin viverra vestibulum ante a finibus.
+    </p>
+  </div>
+
+  <div class="about-content">
+    <!-- Columna izquierda: 3 items (pueden ser más) -->
+    <div class="about-text">
+      <div class="about-item">
+        <h3>Lorem ipsum dolor</h3>
+        <p>
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur...
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>Lorem ipsum dolor</h3>
+        <p>
+          Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+      <div class="about-item">
+        <h3>Lorem ipsum dolor</h3>
+        <p>
+          Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem...
+        </p>
+      </div>
+    </div>
+
+    <!-- Columna derecha: placeholder de imagen -->
+    <div class="about-image">
+      <img 
+        src="https://picsum.photos/600/400" 
+        alt="Placeholder"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Sección FEATURED PROJECTS -->
+<section id="featured" class="featured-section">
+  <div class="featured-heading">
+    <h2>Lorem ipsum dolor</h2>
+    <p class="subtitle">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    </p>
+    <button class="btn-see-all" [routerLink]="['/projects']" >See all Projects</button>
+  </div>
+
+  <!-- Aquí puedes poner una imagen grande, un placeholder, o un carrusel -->
+  <div class="featured-image">
+    <img 
+      src="https://picsum.photos/1600/400" 
+      alt="Placeholder for featured projects"
+    />
+  </div>
+</section>
+
+<!-- CONTACT WRAPPER: Izquierda texto + Derecha formulario -->
+<section id="contact" class="contact-wrapper">
+  <div class="contact-left">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+      sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+      nesciunt. Neque porro quisquam est...
+    </p>
+  </div>
+
+  <div class="contact-right">
+    <div class="contact-box">
+      <h3>Lorem Ipsum</h3>
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="Email address" />
+        </div>
+        <button class="btn-send" type="submit">Send</button>
+      </form>
+
+      <!-- Bloque "Contact Me" + iconos -->
+      <div class="contact-me-icons">
+        <p>Contact Me</p>
+        <div class="icons">
+          <!-- Iconos placeholders o links a redes -->
+          <a href="#">X</a>
+          <a href="#">X</a>
+          <a href="#">X</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-section">
+  <!-- 4 columnas, por ejemplo -->
+  <div class="footer-col logo-col">
+    <!-- Imagen placeholder -->
+    <div class="footer-img-placeholder">
+      <img 
+      src="https://picsum.photos/100/100" 
+      alt="logo"
+    />
+    </div>
+  </div>
+
+  <div class="footer-col">
+    <h4>Landing Page</h4>
+    <ul>
+      <li><a href="#hero">Hero</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Projects</h4>
+    <ul>
+      <li><a href="#">Web Project</a></li>
+      <li><a href="#">Game Projects</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Game</h4>
+    <!-- Algún link, si procede -->
+    <ul>
+      <li><a href="#">Link1</a></li>
+      <li><a href="#">Link2</a></li>
+    </ul>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright">
+    &copy; Lorem, Ipsum. 2025. Lorem Ipsum Dolor
+  </div>
+</footer>
+

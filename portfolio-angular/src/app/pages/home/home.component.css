@@ -1,0 +1,452 @@
+/* --------------------------------------------------
+   1) GLOBAL RESET / ESTILOS BÁSICOS
+-------------------------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #000;  /* Color de fondo global (negro) */
+  color: #e7ecef;          /* Texto claro por defecto */
+}
+
+
+/* --------------------------------------------------
+   2) HERO SECTION
+-------------------------------------------------- */
+.hero {
+  display: flex;
+  /* width: 100%; */
+  /* min-height: 100vh; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #000; /* Mismo color que el body, 
+                             o podrías omitirlo si ya es #000 */
+}
+
+.hero-image {
+  flex: 2; /* imagen es 2 partes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  flex: 1; /* texto es 1 parte */
+  margin-left: 2rem;
+}
+
+/* TITULOS en la Hero */
+.hero-content h2 {
+  color: #0046ff; /* azul eléctrico */
+  font-size: 2.5rem; 
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+.hero-content h3 {
+  color: #fff;
+  font-size: 2.3rem;
+  margin: 0 0 1rem 0;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-around;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* MEDIA QUERIES HERO */
+
+/* Pantallas muy grandes (>=1280px) */
+@media (min-width: 1280px) {
+  .hero {
+    padding: 3rem 5rem; /* más aire en monitores grandes */
+  }
+  .hero-content h2 {
+    font-size: 8em; 
+  }
+}
+
+/* Pantallas medianas (769px a 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero {
+    padding: 2rem 3rem;
+  }
+  .hero-content h2 {
+    font-size: 2.2rem; 
+  }
+}
+
+/* Pantallas pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; 
+    justify-content: center;
+    padding: 1rem;
+  }
+  .hero-image,
+  .hero-content {
+    flex: auto;
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  .hero-content h3 {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------------
+   3) ABOUT SECTION
+-------------------------------------------------- */
+.about-section {
+  background-color: #fff;
+  color: #000;
+  padding: 4rem 2rem;
+}
+
+/* Cabecera principal (título, subtítulo) */
+.about-heading {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+.about-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.about-heading .subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Contenido: texto + imagen */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+.about-item {
+  margin-bottom: 1.5rem;
+}
+.about-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+.about-item p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+  font-family: 'Helvetica', sans-serif;
+}
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsivo About */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem;
+  }
+  .about-heading {
+    margin-bottom: 2rem;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+  .about-image {
+    margin-top: 1rem;
+  }
+}
+
+/* --------------------------------------------------
+   4) FEATURED PROJECTS SECTION
+-------------------------------------------------- */
+.featured-section {
+  background-color: #fff;
+  color: #000;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Encabezado: Título, subtítulo */
+.featured-heading {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+.featured-heading h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.featured-heading .subtitle {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Botón "See all Projects" */
+.btn-see-all {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-see-all:hover {
+  background-color: #999;
+}
+
+/* Imagen en Featured (opcional) */
+.featured-image {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.featured-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Responsivo Featured */
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 2rem 1rem;
+  }
+  .featured-heading h2 {
+    font-size: 1.6rem;
+  }
+  .featured-heading .subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------------
+   5) CONTACT WRAPPER
+-------------------------------------------------- */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  color: #000;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+/* Contact Columna Izquierda */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-left h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-left p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Contact Columna Derecha */
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+.contact-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+.form-row input {
+  flex: 1;
+}
+.contact-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn-send {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* "Contact Me" + iconos */
+.contact-me-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-me-icons p {
+  margin: 0;
+  font-weight: bold;
+}
+.contact-me-icons .icons a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 0.5rem;
+  width: 30px; 
+  height: 30px;
+  border: 1px solid #000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Responsivo Contact */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 2rem;
+    flex-direction: column;
+  }
+  .contact-right {
+    margin-top: 2rem;
+  }
+}
+
+/* --------------------------------------------------
+   6) FOOTER
+-------------------------------------------------- */
+.footer-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative; /* Para posicionar copyright */
+}
+
+/* Columnas en footer */
+.footer-col {
+  flex: 1;
+  min-width: 150px;
+}
+.footer-col h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 0.3rem;
+}
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+/* Logo col */
+.logo-col {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-img-placeholder {
+  width: 100px; 
+  height: 80px; 
+  background-color: #ddd;
+  border: 1px solid #ccc;
+}
+
+/* Copyright */
+.footer-section .footer-copyright {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  font-size: 0.9rem;
+  color: #f7f7f7;
+}
+
+/* Responsivo Footer */
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    position: static;
+  }
+  .footer-copyright {
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
