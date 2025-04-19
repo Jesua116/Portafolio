@@ -1,2 +1,55 @@
-<h2>Contáctame</h2>
-<p>Información de contacto, formulario, redes sociales.</p>
+
+<!-- CONTACT WRAPPER: Izquierda texto + Derecha formulario -->
+<section id="contact" class="contact-wrapper">
+    <div class="contact-left">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p>
+            Si deseas colaborar, tienes alguna pregunta o simplemente quieres
+            saludar, este es el lugar para hacerlo. ¡Estaré encantado de
+            escuchar tus
+            propuestas y compartir conocimientos!
+        </p>
+    </div>
+
+    <div class="contact-right">
+        <div class="contact-box">
+            <h3>Envíame tu mensaje</h3>
+            <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
+                <div class="form-row">
+                  <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Nombre" required />
+                  <input type="text" name="lastname" [(ngModel)]="formData.lastname" placeholder="Apellido" required />
+                </div>
+                <div class="form-row">
+                  <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Correo electrónico" required />
+                </div>
+                <div class="form-row">
+                  <textarea name="message" [(ngModel)]="formData.message" placeholder="Tu mensaje" required></textarea>
+                </div>
+                <button class="btn-send" type="submit">Enviar</button>
+              </form>
+              
+
+            <!-- Bloque "Contact Me" + iconos -->
+            <div class="contact-me-icons">
+                <p>Sígueme o contáctame en redes</p>
+                <div class="icons">
+                    <a href="https://github.com/Jesua16" target="_blank"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <!-- <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a> -->
+                    <a href="https://facebook.com/jesuasantes16" target="_blank"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:tjesuasantes@gmail.com" aria-label="Gmail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

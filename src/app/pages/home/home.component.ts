@@ -8,11 +8,12 @@ import { TimelineComponent } from './timeline/timeline.component';
 
 import Typed from 'typed.js';
 import { SkillsComponent } from "../../shared/skills/skills.component";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, TimelineComponent, SkillsComponent],
+  imports: [CommonModule, RouterLink, TimelineComponent, SkillsComponent, ContactComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
