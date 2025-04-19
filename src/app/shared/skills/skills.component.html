@@ -1,0 +1,10 @@
+<section id="skills" class="skills-section" data-aos="fade-up">
+    <h2 class="skills-title">Stack&nbsp;&amp;&nbsp;Habilidades</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card" *ngFor="let s of skills" data-aos="zoom-in">
+            <img [src]="s.icon" [alt]="s.name" />
+            <span>{{ s.name }}</span>
+        </div>
+    </div>
+</section>

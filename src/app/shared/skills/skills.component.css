@@ -1,0 +1,89 @@
+/* ─────────────  SECCIÓN COMPLETA  ───────────── */
+.skills-section {
+    padding-block: 3rem 8rem;
+    text-align: center;
+}
+
+/* título */
+.skills-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.25rem;
+    color: #0046ff;
+    margin: 0 0 3.5rem;
+}
+
+/* ─────────────  GRID RESPONSIVO  ─────────────  */
+.skills-grid {
+    display: grid;
+    gap: 3rem 4rem;
+    justify-content: center;
+    max-width: 750px;
+    margin-inline: auto;
+}
+
+@media (min-width:768px) {
+    .skills-grid {
+        grid-template-columns: repeat(5, 150px);
+        /* 3 × 150 px               */
+    }
+}
+
+
+@media (max-width:767px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+
+/* ─────────────  TARJETA  ───────────── */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+
+    padding: 1.6rem 1rem;
+    background: #111;
+    border-radius: 14px;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px) scale(1.06);
+    box-shadow: 0 0 14px #0046ff;
+}
+
+.skill-card svg,
+.skill-card img {
+    width: 64px;
+    height: 64px;
+}
+
+/* texto */
+.skill-card span {
+    font-size: .95rem;
+    color: #e7ecef;
+}
+
+/* ─────────────  MOBILE TWEAK  ───────────── */
+@media (max-width:480px) {
+    .skills-title {
+        font-size: 1.8rem;
+    }
+
+    .skills-grid {
+        gap: 2rem;
+    }
+
+    .skill-card {
+        padding: 1.25rem .75rem;
+    }
+
+    .skill-card svg,
+    .skill-card img {
+        width: 52px;
+        height: 52px;
+    }
+}
