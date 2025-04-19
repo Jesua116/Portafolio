@@ -5,12 +5,18 @@ import { AppComponent } from './app/app.component';
 /* Import AOS */
 import AOS from 'aos';
 
+
 bootstrapApplication(AppComponent, appConfig)
   .then(() => {
-    /* Inicializar AOS después de que la app ha arrancado */
+    // 1) Inicializar AOS con ajustes globales
     AOS.init({
-      duration: 800,  // Duración de la animación en ms
-      once: true      // true = solo se anima la 1ra vez que aparece el elemento
+      // duration: 800, // ms
+      // offset: 300,   // píxeles antes de entrar
+      // once: false,   // que se repita
+      // mirror: true   // también al hacer scroll hacia arriba
     });
+
+    // 2) Por si tienes imágenes grandes:
+    window.addEventListener('load', () => AOS.refresh());
   })
-  .catch((err) => console.error(err));
+  .catch(err => console.error(err));

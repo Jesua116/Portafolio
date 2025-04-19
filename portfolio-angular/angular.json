@@ -29,11 +29,10 @@
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-               "node_modules/aos/dist/aos.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.css"
             ],
             "scripts": [
-             "node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {
@@ -97,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
