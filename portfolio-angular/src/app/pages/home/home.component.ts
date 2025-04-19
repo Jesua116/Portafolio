@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     // 1) PRIMER TYPED
     const firstTypedOptions = {
-      strings: ['Portfolio'],  // Solo una palabra
+      strings: ['Portafolio'],  // Solo una palabra
       typeSpeed: 80,
       backSpeed: 30,
       loop: false,
@@ -64,8 +64,13 @@ export class HomeComponent implements OnInit {
     const thirdTypedOptions = {
       strings: [
         ' Dev Jr',
-        ' Estudiante',
-        ' Game Dev'
+        ' Tech Geek',
+        ' Game Dev',
+        ' Web Enthusiast',
+        ' Always Learning',
+        ' Creative Mind',
+        ' Curious Coder',
+        ' Problem Solver',
       ],
       typeSpeed: 80,
       backSpeed: 30,

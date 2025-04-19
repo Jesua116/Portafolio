@@ -1,3 +1,7 @@
+/* En src/styles.css */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 html, body {
   margin: 0;
   padding: 0;
