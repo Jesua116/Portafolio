@@ -15,209 +15,115 @@
   </div>
 </section>
 
-<section id="timeline" class="timeline-section">
-  <h2 data-aos="fade-up">Mi Trayectoria</h2>
-  
-  <div class="timeline-container">
+<app-timeline></app-timeline>
 
-    <!-- 1) Inicio de Carrera -->
-    <div class="timeline-item" data-aos="fade-right">
-      <div class="timeline-date">Ago 2021</div>
-      <div class="timeline-content">
-        <h4>Inicio de Carrera</h4>
-        <p>
-          Ingresé a Tecmilenio para estudiar Ingeniería en Desarrollo de Software,
-          motivado por mi fascinación por la tecnología y los videojuegos
-          desde niño.
-        </p>
-      </div>
-    </div>
+<!-- Sección FEATURED PROJECTS -->
+<section id="featured" class="featured-section">
+  <div class="featured-heading">
+    <h2>Proyectos Destacados</h2>
+    <p class="subtitle">
+      Un vistazo rápido a mis principales creaciones e ideas.
+      ¡Descubre también mis demos de videojuegos!
+    </p>
+    <button class="btn-see-all" [routerLink]="['/projects']">
+      Ver todos los proyectos
+    </button>
+  </div>
 
-    <!-- 2) 5º Semestre -->
-    <div class="timeline-item" data-aos="fade-left">
-      <div class="timeline-date">Ago 2023</div>
-      <div class="timeline-content">
-        <h4>Primeros Proyectos Web y 2D</h4>
-        <p>
-          Desarrollé mi primera página web grande y un prototipo de juego 2D,
-          reforzando mi preferencia por el lado visual (frontend) y el dev de juegos.
-        </p>
-      </div>
-    </div>
-
-    <!-- 3) 6º Semestre -->
-    <div class="timeline-item" data-aos="fade-right">
-      <div class="timeline-date">Ene 2024</div>
-      <div class="timeline-content">
-        <h4>Expandiendo Habilidades (3D)</h4>
-        <p>
-          Retomé mi juego 2D para mejorarlo y trabajé en un proyecto 3D,
-          incursionando en diseño propio de entornos y mecánicas más complejas.
-        </p>
-      </div>
-    </div>
-
-    <!-- 4) Fibrax -->
-    <div class="timeline-item" data-aos="fade-left">
-      <div class="timeline-date">May - Dic 2024</div>
-      <div class="timeline-content">
-        <h4>Colaboración en Fibrax</h4>
-        <p>
-          Participé en el mantenimiento de páginas y webapps, confirmando
-          mi gusto por implementar rebrandings y diseñar nuevas interfaces.
-        </p>
-      </div>
-    </div>
-
-    <!-- 5) 8º Semestre -->
-    <div class="timeline-item" data-aos="fade-right">
-      <div class="timeline-date">Ene 2025</div>
-      <div class="timeline-content">
-        <h4>Último Semestre</h4>
-        <p>
-          Retomo mi último semestre para cerrar la carrera, perfeccionando
-          proyectos y equilibrando la experiencia de Fibrax.
-        </p>
-      </div>
-    </div>
-
-    <!-- 6) Graduación -->
-    <div class="timeline-item" data-aos="fade-left">
-      <div class="timeline-date">May - Jun 2025</div>
-      <div class="timeline-content">
-        <h4>Graduación</h4>
-        <p>
-          ¡Por fin! Culmino mi Ingeniería en Desarrollo de Software y
-          asisto a la ceremonia en junio. Un gran paso hacia mis metas.
-        </p>
-      </div>
-    </div>
-
-    <!-- 7) Futuro -->
-    <div class="timeline-item" data-aos="fade-up">
-      <div class="timeline-date">Próximamente</div>
-      <div class="timeline-content">
-        <h4>Planes Futuros</h4>
-        <p>
-          Seguiré capacitándome en JS, TS y Angular, combinándolo con
-          trabajos freelance. Mi meta es participar en proyectos que
-          marquen a otros, ya sea en la web o en videojuegos.
-        </p>
-      </div>
-    </div>
-
+  <div class="featured-image">
+    <img src="https://picsum.photos/1600/400"
+      alt="Placeholder for featured projects" />
   </div>
 </section>
 
+<!-- CONTACT WRAPPER: Izquierda texto + Derecha formulario -->
+<section id="contact" class="contact-wrapper">
+  <div class="contact-left">
+    <h2>¿Tienes un proyecto en mente?</h2>
+    <p>
+      Si deseas colaborar, tienes alguna pregunta o simplemente quieres
+      saludar, este es el lugar para hacerlo. ¡Estaré encantado de escuchar tus
+      propuestas y compartir conocimientos!
+    </p>
+  </div>
 
+  <div class="contact-right">
+    <div class="contact-box">
+      <h3>Envíame tu mensaje</h3>
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="Nombre" />
+          <input type="text" placeholder="Apellido" />
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="Correo electrónico" />
+        </div>
+        <button class="btn-send" type="submit">Enviar</button>
+      </form>
 
-
-  <!-- Sección FEATURED PROJECTS -->
-  <section id="featured" class="featured-section">
-    <div class="featured-heading">
-      <h2>Proyectos Destacados</h2>
-      <p class="subtitle">
-        Un vistazo rápido a mis principales creaciones e ideas.
-        ¡Descubre también mis demos de videojuegos!
-      </p>
-      <button class="btn-see-all" [routerLink]="['/projects']">
-        Ver todos los proyectos
-      </button>
-    </div>
-
-    <!-- Aquí puedes poner una imagen grande, un placeholder, o un carrusel -->
-    <div class="featured-image">
-      <img src="https://picsum.photos/1600/400" alt="Placeholder for featured projects" />
-    </div>
-  </section>
-
-  <!-- CONTACT WRAPPER: Izquierda texto + Derecha formulario -->
-  <section id="contact" class="contact-wrapper">
-    <div class="contact-left">
-      <h2>¿Tienes un proyecto en mente?</h2>
-      <p>
-        Si deseas colaborar, tienes alguna pregunta o simplemente quieres
-        saludar, este es el lugar para hacerlo. ¡Estaré encantado de escuchar tus
-        propuestas y compartir conocimientos!
-      </p>
-    </div>
-
-    <div class="contact-right">
-      <div class="contact-box">
-        <h3>Envíame tu mensaje</h3>
-        <form class="contact-form">
-          <div class="form-row">
-            <input type="text" placeholder="Nombre" />
-            <input type="text" placeholder="Apellido" />
-          </div>
-          <div class="form-row">
-            <input type="email" placeholder="Correo electrónico" />
-          </div>
-          <button class="btn-send" type="submit">Enviar</button>
-        </form>
-
-        <!-- Bloque "Contact Me" + iconos -->
-        <div class="contact-me-icons">
-          <p>Sígueme o contáctame en redes</p>
-          <div class="icons">
-            <a href="https://github.com/Jesua16" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <!-- <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" aria-label="LinkedIn">
+      <!-- Bloque "Contact Me" + iconos -->
+      <div class="contact-me-icons">
+        <p>Sígueme o contáctame en redes</p>
+        <div class="icons">
+          <a href="https://github.com/Jesua16" target="_blank"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <!-- <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a> -->
-            <a href="https://facebook.com/jesuasantes16" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="mailto:tjesuasantes@gmail.com" aria-label="Gmail">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
+          <a href="https://facebook.com/jesuasantes16" target="_blank"
+            aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="mailto:tjesuasantes@gmail.com" aria-label="Gmail">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
-
       </div>
-    </div>
-  </section>
 
-
-  <!-- FOOTER -->
-  <footer class="footer-section">
-    <!-- 4 columnas, por ejemplo -->
-    <div class="footer-col logo-col">
-      <!-- Imagen placeholder -->
-      <div class="footer-img-placeholder">
-        <!-- <img class="logo" src="assets/images/az7.jpeg" alt="logo" /> -->
-      </div>
     </div>
+  </div>
+</section>
 
-    <div class="footer-col">
-      <h4>Landing Page</h4>
-      <ul>
-        <li><a href="#hero">Hero</a></li>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<!-- FOOTER -->
+<footer class="footer-section">
+  <!-- 4 columnas, por ejemplo -->
+  <div class="footer-col logo-col">
+    <!-- Imagen placeholder -->
+    <div class="footer-img-placeholder">
+      <!-- <img class="logo" src="assets/images/az7.jpeg" alt="logo" /> -->
     </div>
+  </div>
 
-    <div class="footer-col">
-      <h4>Projects</h4>
-      <ul>
-        <li><a href="#">Web Project</a></li>
-        <li><a href="#">Game Projects</a></li>
-      </ul>
-    </div>
+  <div class="footer-col">
+    <h4>Landing Page</h4>
+    <ul>
+      <li><a href="#hero">Hero</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 
-    <div class="footer-col">
-      <h4>Game</h4>
-      <!-- Algún link, si procede -->
-      <ul>
-        <li><a href="#">Link1</a></li>
-        <li><a href="#">Link2</a></li>
-      </ul>
-    </div>
+  <div class="footer-col">
+    <h4>Projects</h4>
+    <ul>
+      <li><a href="#">Web Project</a></li>
+      <li><a href="#">Game Projects</a></li>
+    </ul>
+  </div>
 
-    <!-- Copyright -->
-    <div class="footer-copyright">
-      &copy; Jesua Santes. 2025. Todos los derechos reservados.
-    </div>
-  </footer>
+  <div class="footer-col">
+    <h4>Game</h4>
+    <!-- Algún link, si procede -->
+    <ul>
+      <li><a href="#">Link1</a></li>
+      <li><a href="#">Link2</a></li>
+    </ul>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright">
+    &copy; Jesua Santes. 2025. Todos los derechos reservados.
+  </div>
+</footer>

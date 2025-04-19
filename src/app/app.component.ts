@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
-declare var AOS: any; // Para que TypeScript reconozca la variable global
+declare var AOS: any;
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     AOS.init({
-      duration: 800, // Duración de la animación en ms
-      once: true     // Si true, la animación se reproduce solo una vez
+      duration: 800, 
+      once: true   
     });
   }
 }

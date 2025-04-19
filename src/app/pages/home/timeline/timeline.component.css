@@ -1,0 +1,125 @@
+/* -------------  TIMELINE + ILUSTRACIÓN  ------------- */
+
+/* CONTENEDOR principal  */
+.timeline-section {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+
+}
+
+.timeline-section>h2 {
+    margin: 0 0 3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    align-self: center;
+
+}
+
+/* FILA con ilustración + timeline */
+.timeline-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+
+}
+
+/* -----  Columna ILUSTRACIÓN  ----- */
+.timeline-illustration {
+    flex: 0 0 400px;
+    /* ancho fijo */
+    position: relative;
+    pointer-events: none;
+    margin-right: 2rem;
+    z-index: 20;
+}
+
+.timeline-illustration img {
+    width: 100%;
+    height: auto;
+
+}
+
+/* Halo */
+.timeline-illustration::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 620px;
+    height: 820px;
+    transform: translate(-52%, -75%);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(0, 70, 255, .25) 0%,
+            rgba(0, 70, 255, 0) 70%);
+    filter: blur(35px);
+    z-index: -1;
+
+}
+
+/* -----  Columna LÍNEA  ----- */
+.timeline-container {
+    flex: 1 1 0;
+
+    position: relative;
+    padding-left: 5rem;
+
+    border-left: 2px solid rgba(255, 255, 255, .2);
+    z-index: 10;
+}
+
+/* Ítem */
+.timeline-item {
+    margin-bottom: 2rem;
+}
+
+/* Fecha */
+.timeline-date {
+    background: #0046ff;
+    color: #fff;
+    font-weight: 700;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+/* Card */
+.timeline-content {
+    background: rgba(255, 255, 255, .05);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background .25s, transform .25s;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, .08);
+    transform: translateX(4px);
+}
+
+.timeline-content h4 {
+    margin: 0 0 .5rem;
+    color: #a3cef1;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #e7ecef;
+}
+
+/* -----  RESPONSIVE  ----- */
+@media (max-width: 768px) {
+    .timeline-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .timeline-illustration {
+        display: none;
+    }
+}

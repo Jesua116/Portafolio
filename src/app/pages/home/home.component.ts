@@ -2,12 +2,16 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { ParallaxDirective } from '../../shared/parallax.directive';
+import { TimelineComponent } from './timeline/timeline.component';
+
+
 import Typed from 'typed.js';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TimelineComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [
