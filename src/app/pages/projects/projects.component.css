@@ -1,0 +1,211 @@
+.projects-page {
+    padding: 4rem 1rem;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 5rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    color: #ddd;
+  }
+  
+  .category-title {
+    font-size: 2rem;
+    margin: 3rem 0 2rem 0;
+    color: #ffffff;
+    border-left: 5px solid #007bff;
+    padding-left: 0.75rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .project-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+  }
+  
+  .mascot-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+    height: 400px;
+  }
+  
+  .gato-fixed {
+    width: 240px;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .comic-bubble {
+    position: fixed;
+    right: 15%;
+    top: 58%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    max-width: 240px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* .comic-bubble::after {
+    content: "";
+    position: fixed;
+    bottom: -20px;
+    left: 30px;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+  } */
+  
+  
+  .projects-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .detailed-project {
+    display: flex;
+    background-color: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .detailed-project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.3);
+  }
+  
+  .carousel-container {
+    width: 35rem;
+    max-width: 100%;
+    height: 75%;
+  }
+  
+  .carousel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  
+  .project-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-content .highlight {
+    color: #007bff;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  .project-content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .tech-stack {
+    margin-top: 1rem;
+  }
+  
+  .tech-stack span {
+    background-color: #007bff;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 992px) {
+    .project-section {
+      flex-direction: column-reverse;
+    }
+  
+    .mascot-column {
+      align-items: center;
+      position: static;
+      margin-top: 2rem;
+      height: auto;
+    }
+  
+    .detailed-project {
+      flex-direction: column;
+    }
+  
+    .carousel-container {
+      width: 100%;
+    }
+  }
+
+  
+  /* Glow y posición para el gato programador */
+.gato-fixed {
+    width: clamp(140px, 20vw, 300px);
+    animation: floaty 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px #0050ff);
+    margin-top: 2rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 55%;
+    right: 4%;
+}
+  
+  .gato-fixed:hover {
+    transform: scale(1.05);
+  }
+  
+  .mascot-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @keyframes floaty {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }

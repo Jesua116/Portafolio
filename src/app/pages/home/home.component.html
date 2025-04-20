@@ -14,32 +14,33 @@
     </h3>
   </div>
 </section>
-
+<div id="about">
 <app-timeline></app-timeline>
 
 <app-skills></app-skills>
-
+</div>
 <!-- Sección FEATURED PROJECTS -->
-<section id="featured" class="featured-section">
-  <div class="featured-heading">
+<section id="featured" class="featured-section" data-aos="fade-up">
+  <div class="featured-heading" data-aos="fade-up" data-aos-delay="100">
     <h2>Proyectos Destacados</h2>
-    <p class="subtitle">
+    <p data-aos="fade-up" class="subtitle">
       Un vistazo rápido a mis principales creaciones e ideas.
       ¡Descubre también mis demos de videojuegos!
     </p>
-    <button class="btn-see-all" [routerLink]="['/projects']">
+    <button class="btn-see-all" [routerLink]="['/projects']" data-aos="zoom-in" data-aos-delay="200">
       Ver todos los proyectos
     </button>
   </div>
 
-  <div class="featured-image">
-    <img src="https://picsum.photos/1600/400"
-      alt="Placeholder for featured projects" />
+  <div class="featured-image" data-aos="fade-up" data-aos-delay="300">
+    <app-project-carousel></app-project-carousel>
   </div>
 </section>
 
-<app-contact></app-contact>
 
+<div id="contact">
+<app-contact></app-contact>
+</div>
 <!-- FOOTER -->
 <footer class="footer-section">
   <!-- 4 columnas, por ejemplo -->

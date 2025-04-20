@@ -7,9 +7,11 @@ CONTACT WRAPPER
     flex-direction: row;
     background-color: #000;
     color: #fff;
-    padding: 6rem 0rem 9rem 9rem;
+    padding: 0rem 9rem 5rem 9rem;
     gap: 2rem;
     font-family: 'Bestigia-Regular', sans-serif;
+
+    margin-bottom: 4rem;
   }
   
   /* Columnas */
@@ -18,6 +20,7 @@ CONTACT WRAPPER
     flex: 1;
     min-width: 300px;
     display: flex;
+    align-items: center;
   }
   
   .contact-left {
@@ -26,17 +29,18 @@ CONTACT WRAPPER
   }
   
   .contact-left h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
     color: #0050ff;
   }
   
   .contact-left p,
   .contact-me-icons p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     color: #ccc;
-    margin: 0;
+    margin-top: 0rem;
     font-weight: bold;
     font-family: 'Bestigia-Regular', sans-serif;
   }
@@ -59,10 +63,10 @@ CONTACT WRAPPER
   
   /* Título del formulario */
   .contact-box h3 {
-    font-size: 1.3rem;
+    font-size: 3rem;
+    margin-top: 0;
     margin-bottom: 1.2rem;
-    color: #fff;
-    font-family: 'Bestigia-Regular', sans-serif;
+    color: #a3cef1;
   }
   
   /* Formulario */
@@ -184,4 +188,132 @@ CONTACT WRAPPER
       flex-direction: column;
     }
   }
+  
+  /* Loader */
+
+  .spinner {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 3px solid transparent;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Estilos para el uso del botón */
+  
+  .btn-send:disabled {
+    opacity: 0.5;
+    background-color: #0050ff; 
+    transition: none;
+    box-shadow: none;
+  }
+  
+  .btn-send:disabled:hover {
+    background-color: #0050ff; 
+  }
+
+  .btn-send:disabled {
+    /* ya tienes esto */
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #0050ff;
+  }
+  
+  /* Estado de éxito visual */
+  .btn-send.success {
+    background-color: #28a745 !important; /* Verde éxito */
+    color: #fff;
+  }
+  
+
+  
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }
+  
+  .input-shake {
+    animation: shake 0.4s;
+  }
+
+  .gato-cta-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .gato-cta {
+    width: clamp(140px, 20vw, 300px);
+    animation: floaty 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px #0050ff);
+    position: relative;
+    margin-top: 2rem;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes floaty {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+  
+  
+  .gato-cta:hover  {
+    transform: scale(1.05);
+  }
+  
+  .gato-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .comic-bubble {
+    position: absolute;
+    top: 30%;
+    left: 110%;
+    background: #fff;
+    color: #000;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    box-shadow: 0 0 8px rgba(0, 80, 255, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .gato-wrapper:hover .comic-bubble {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  
+  @keyframes floaty {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+  
+  
+  .gato-cta-wrapper:hover .comic-bubble {
+    opacity: 1;
+  }
+
+  
+  
+
   

@@ -1,0 +1,38 @@
+.splide__slide {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #111;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 2rem 0rem;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0 15px #00000077;
+    object-fit: cover;
+    max-height: 300px;
+  }
+  
+  .splide__slide h3 {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a3cef1;;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  .splide__slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #007bff, 0 0 40px #007bff33;
+  }
+  
+  .splide__slide:hover h3 {
+    color: #1e90ff;
+  }
+  

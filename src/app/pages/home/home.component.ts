@@ -2,8 +2,9 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { ParallaxDirective } from '../../shared/parallax.directive';
+// import { ParallaxDirective } from '../../shared/parallax.directive';
 import { TimelineComponent } from './timeline/timeline.component';
+import { ProjectCarouselComponent } from '../../components/project-carousel/project-carousel.component';
 
 
 import Typed from 'typed.js';
@@ -13,7 +14,7 @@ import { ContactComponent } from "../contact/contact.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, TimelineComponent, SkillsComponent, ContactComponent],
+  imports: [CommonModule, RouterLink, TimelineComponent, SkillsComponent, ContactComponent, ProjectCarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   animations: [

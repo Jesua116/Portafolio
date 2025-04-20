@@ -19,6 +19,6 @@ export class SkillsComponent {
     { name: 'TypeScript', icon: 'assets/icons/typescript.svg'      },
     { name: 'Unity 3D',   icon: 'assets/icons/unity.svg'   },
     { name: 'Node.js',    icon: 'assets/icons/nodedotjs.svg'    },
-    { name: 'Git',        icon: 'assets/icons/github.svg'     }
+    { name: 'GitHub',        icon: 'assets/icons/github.svg'     }
   ];
 }

@@ -1,45 +1,99 @@
-
 <!-- CONTACT WRAPPER: Izquierda texto + Derecha formulario -->
-<section id="contact" class="contact-wrapper">
-    <div class="contact-left">
+<section id="contact" class="contact-wrapper" data-aos="fade-up"
+    data-aos-offset="100">
+    <div class="contact-left" data-aos="fade-right" data-aos-duration="800">
         <h2>¿Tienes un proyecto en mente?</h2>
-        <p>
-            Si deseas colaborar, tienes alguna pregunta o simplemente quieres
-            saludar, este es el lugar para hacerlo. ¡Estaré encantado de
-            escuchar tus
-            propuestas y compartir conocimientos!
-        </p>
+        <p>¡Hablemos y creemos algo increíble juntos!</p>
+
+        <div class="gato-cta-wrapper" (mouseenter)="iniciarTyped()"
+            data-aos="zoom-in" data-aos-delay="200">
+            <div class="gato-wrapper">
+                <img src="assets/images/GatoOK.png" alt="Gato animado"
+                    class="gato-cta" />
+                <div class="comic-bubble">
+                    <span #typedGato></span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="contact-right">
+    <div class="contact-right" data-aos="fade-left" data-aos-duration="800">
         <div class="contact-box">
-            <h3>Envíame tu mensaje</h3>
+            <h3 data-aos="fade-up" data-aos-delay="100">Envíame tu mensaje</h3>
+
             <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
-                <div class="form-row">
-                  <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Nombre" required />
-                  <input type="text" name="lastname" [(ngModel)]="formData.lastname" placeholder="Apellido" required />
+                <div class="form-row" data-aos="fade-up" data-aos-delay="200">
+                    <input
+                        type="text"
+                        name="name"
+                        [(ngModel)]="formData.name"
+                        placeholder="Nombre"
+                        required
+                        (ngModelChange)="onInputChange('name')"
+                        [ngClass]="{'input-shake': shakeFields.name}"
+                        #nameRef="ngModel" />
+
+                    <input
+                        type="text"
+                        name="lastname"
+                        [(ngModel)]="formData.lastname"
+                        placeholder="Apellido"
+                        required
+                        (ngModelChange)="onInputChange('lastname')"
+                        [ngClass]="{'input-shake': shakeFields.lastname}"
+                        #lastnameRef="ngModel" />
                 </div>
-                <div class="form-row">
-                  <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Correo electrónico" required />
+
+                <div class="form-row" data-aos="fade-up" data-aos-delay="300">
+                    <input
+                        type="email"
+                        name="email"
+                        [(ngModel)]="formData.email"
+                        placeholder="Correo electrónico"
+                        required
+                        (ngModelChange)="onInputChange('email')"
+                        [ngClass]="{'input-shake': shakeFields.email}"
+                        #emailRef="ngModel" />
                 </div>
-                <div class="form-row">
-                  <textarea name="message" [(ngModel)]="formData.message" placeholder="Tu mensaje" required></textarea>
+
+                <div class="form-row" data-aos="fade-up" data-aos-delay="400">
+                    <textarea
+                        name="message"
+                        [(ngModel)]="formData.message"
+                        placeholder="Tu mensaje"
+                        required
+                        (ngModelChange)="onInputChange('message')"
+                        [ngClass]="{'input-shake': shakeFields.message}"
+                        #messageRef="ngModel"></textarea>
                 </div>
-                <button class="btn-send" type="submit">Enviar</button>
-              </form>
-              
+
+                <button
+                    class="btn-send"
+                    type="submit"
+                    [disabled]="isSending"
+                    [ngClass]="{'success': wasSent}"
+                    data-aos="zoom-in"
+                    data-aos-delay="500">
+                    <ng-container *ngIf="isSending; else sentOrSend">
+                        <span style="margin-left: 0.6rem;">Enviando </span>
+                        <span class="spinner"></span>
+                    </ng-container>
+                    <ng-template #sentOrSend>
+                        <span *ngIf="wasSent; else defaultText">Enviado ✓</span>
+                        <ng-template #defaultText>Enviar</ng-template>
+                    </ng-template>
+                </button>
+            </form>
 
             <!-- Bloque "Contact Me" + iconos -->
-            <div class="contact-me-icons">
+            <div class="contact-me-icons" data-aos="fade-up"
+                data-aos-delay="600">
                 <p>Sígueme o contáctame en redes</p>
                 <div class="icons">
                     <a href="https://github.com/Jesua16" target="_blank"
                         aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <!-- <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a> -->
                     <a href="https://facebook.com/jesuasantes16" target="_blank"
                         aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
@@ -49,7 +103,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>

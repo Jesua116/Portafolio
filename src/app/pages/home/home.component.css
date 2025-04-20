@@ -230,8 +230,8 @@ body {
    4) FEATURED PROJECTS SECTION — Dark Themed
 -------------------------------------------------- */
 .featured-section {
-  background-color: #000; /* Fondo negro */
-  color: #e7ecef;         /* Texto claro */
+  background-color: #000;
+  color: #e7ecef;
   padding: 0rem 0rem 10rem 0rem;
   text-align: center;
 }
@@ -244,15 +244,16 @@ body {
 
 .featured-heading h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.2rem;
-  color: #0046ff;             /* Azul vivo como en “Habilidades” */
+  font-size: 5rem;
+  color: #0046ff;
   margin-bottom: 1rem;
 }
 
 .featured-heading .subtitle {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #e7ecef;             /* Gris claro suave */
+  color: #e7ecef;
+  /* Gris claro suave */
   margin-bottom: 2.5rem;
 }
 
@@ -269,7 +270,8 @@ body {
 }
 
 .btn-see-all:hover {
-  background-color: #0036cc; /* Azul más profundo al pasar el cursor */
+  background-color: #0036cc;
+  /* Azul más profundo al pasar el cursor */
 }
 
 /* Imagen destacada */
@@ -284,7 +286,8 @@ body {
   height: auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 70, 255, 0.2); /* Sombra azul suave */
+  box-shadow: 0 0 20px rgba(0, 70, 255, 0.2);
+  /* Sombra azul suave */
 }
 
 /* Responsive */

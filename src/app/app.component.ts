@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ToastService } from './services/toast.service';
 
-declare var AOS: any;
+declare var Aos: any;
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent implements OnInit {
-  title = 'portfolio-angular';
+  title = 'portfolio';
 
   ngOnInit() {
-    AOS.init({
-      duration: 800, 
-      once: true   
-    });
   }
+  
+
+  constructor(public toast: ToastService) {}
+
 }

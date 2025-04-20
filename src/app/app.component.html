@@ -11,3 +11,19 @@
 
 
 <router-outlet></router-outlet>
+
+<!-- Toast container -->
+<div class="toast-container">
+  <div 
+  class="toast" 
+  *ngFor="let toast of toast.toasts"
+  [ngClass]="[toast.type, toast.out ? 'out' : '']">
+  {{ toast.message }}
+  <i class="fas" [ngClass]="toast.type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'"></i>
+ 
+</div>
+
+</div>
+
+
+

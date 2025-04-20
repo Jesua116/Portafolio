@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-angular",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,9 +20,10 @@
     "@angular/router": "^18.2.0",
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@splidejs/splide": "^4.1.4",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
-    "portfolio-angular": "file:",
+    "portfolio": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "typed.js": "^2.1.0",

@@ -1,0 +1,17 @@
+<ng-container *ngIf="proyectos?.length">
+    <section class="splide" [attr.aria-label]="'Carrusel de proyectos'">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li
+                    *ngFor="let proyecto of proyectos"
+                    class="splide__slide"
+                    (click)="irADetalle(proyecto.fragment)"
+                    style="cursor: pointer;">
+                    <img [src]="proyecto.imagen" [alt]="proyecto.nombre"
+                        class="carousel-image" />
+                    <h3>{{ proyecto.nombre }}</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+</ng-container>

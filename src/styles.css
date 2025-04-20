@@ -49,3 +49,59 @@ body {
   .typed-cursor {
     color: #000000; /* Cambia este color al que prefieras, ej. blanco #ffffff */
   }
+
+  .toast-container {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    pointer-events: none; /* Para que no bloquee clicks */
+  }
+  
+  .toast {
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    animation: slideFadeIn 0.4s ease-out forwards;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+    pointer-events: all; /* Habilita interacción si lo necesitas */
+  }
+  
+  .toast.success {
+    background-color: #0050ff; /* Azul de tu paleta */
+  }
+  
+  .toast.error {
+    background-color: #e03131; /* Rojo para errores */
+  }
+  
+  .toast.out {
+    animation: slideFadeOut 0.4s ease-in forwards;
+  }
+  
+  @keyframes slideFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideFadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  
