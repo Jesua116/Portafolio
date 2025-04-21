@@ -20,18 +20,33 @@ export class ProjectCarouselComponent implements AfterViewInit {
   proyectos = [
     {
       nombre: 'Portafolio Web',
-      imagen: 'assets/images/az7.jpeg',
+      imagen: 'assets/projects/Portafolio_1.png',
       fragment: 'portafolio'
     },
     {
       nombre: 'Juego Timesaver',
-      imagen: 'assets/images/az7.jpeg',
+      imagen: 'assets/projects/TS_1.png',
       fragment: 'timesaver'
     },
     {
-      nombre: 'App Inversiones',
-      imagen: 'assets/images/az7.jpeg',
+      nombre: 'Juego Passing Out Pieces',
+      imagen: 'assets/projects/POP_1.png',
+      fragment: 'timesaver'
+    },
+    {
+      nombre: 'Landing pages',
+      imagen: 'assets/projects/FX_1.png',
       fragment: 'inversiones'
+    },
+    {
+      nombre: 'Pagina web',
+      imagen: 'assets/projects/Berserk_1.png',
+      fragment: 'pagina web'
+    },
+    {
+      nombre: 'Pagina web',
+      imagen: 'assets/projects/WanderingBlade_1.png',
+      fragment: 'pagina web'
     }
   ];
   
