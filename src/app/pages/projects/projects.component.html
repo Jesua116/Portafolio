@@ -1,113 +1,167 @@
 <section class="projects-page">
-    <div class="container">
-      <h1 class="section-title" data-aos="fade-up">Mis Proyectos</h1>
-      <p class="section-description" data-aos="fade-up" data-aos-delay="100">
-        Aquí te presento una recopilación de mis principales trabajos, divididos en dos áreas clave: desarrollo web y videojuegos.
-      </p>
-  
-      <!-- PROYECTOS WEB -->
-      <div class="project-group" id="web-projects">
-        <h2 class="category-title" data-aos="fade-up">Proyectos Web</h2>
-  
-        <div class="project-section">
-          <div class="projects-column">
-            <div id="project-db" class="detailed-project" data-aos="fade-up" data-hover-text='["Por algo se empieza ¿No?"]'>
-              <!-- Carrusel aquí -->
-              <div class="carousel-container splide">
-                <!-- Slides de imágenes -->
-              </div>
-              <div class="project-content">
-                <h3><span class="highlight">Página Web con base de datos</span></h3>
-                <p>...</p>
-                <div class="tech-stack">
-                  <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span>
-                </div>
-              </div>
-            </div>
-  
-            <div id="project-responsive" class="detailed-project" data-aos="fade-up" data-hover-text='["No me culpen, estaba leyendo Berserk durante ese semestre"]'>
-              <div class="carousel-container splide">
-                <!-- Slides de imágenes -->
-              </div>
-              <div class="project-content">
-                <h3><span class="highlight">Página web responsive</span></h3>
-                <p>...</p>
-                <div class="tech-stack">
-                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                </div>
+  <div class="container">
+    <h1 class="section-title" data-aos="fade-up">Mis Proyectos</h1>
+    <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+      Aquí te presento una recopilación de mis principales trabajos, divididos en dos áreas clave: desarrollo web y videojuegos.
+    </p>
+
+    <button class="back-home-btn" (click)="volverAInicio()">
+      ←
+    </button>
+
+    <!-- PROYECTOS WEB -->
+    <div class="project-group" id="web-projects">
+      <h2 class="category-title" data-aos="fade-up">Proyectos Web</h2>
+
+      <div class="project-section">
+        <div class="projects-column">
+          <div id="project-db" class="detailed-project" data-aos="fade-up" data-hover-text='["Por algo se empieza ¿No?"]'>
+            <div class="carousel-container splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><img src="assets/projects/WanderingBlade_1.png" alt="WanderingBlade 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/WanderingBlade_2.png" alt="WanderingBlade 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/WanderingBlade_3.png" alt="WanderingBlade 3" /></li>
+                  <li class="splide__slide"><img src="assets/projects/WanderingBlade_4.png" alt="WanderingBlade 4" /></li>
+                </ul>
               </div>
             </div>
-  
-            <div id="project-semester" class="detailed-project" data-aos="fade-up" data-hover-text='["¿Cómo que no tengo todo el semestre para hacer la página ?"]'>
-              <div class="carousel-container splide">
-                <!-- Slides de imágenes -->
-              </div>
-              <div class="project-content">
-                <h3><span class="highlight">Semestre empresarial - Sitios y Rebrandings</span></h3>
-                <p>...</p>
-                <div class="tech-stack">
-                  <span>HTML</span><span>SCSS</span><span>Laravel</span><span>Angular</span>
-                </div>
-              </div>
-            </div>
-  
-            <div id="project-portfolio" class="detailed-project" data-aos="fade-up" data-hover-text='["Finalmente, lo que yo quiera, ¡Cuándo yo quiera!"]'>
-              <div class="carousel-container splide">
-                <!-- Slides de imágenes -->
-              </div>
-              <div class="project-content">
-                <h3><span class="highlight">Portafolio Web</span></h3>
-                <p>...</p>
-                <div class="tech-stack">
-                  <span>Angular</span><span>SCSS</span><span>EmailJS</span>
-                </div>
+            <div class="project-content">
+              <h3><span class="highlight">Página Web con base de datos</span></h3>
+              <p>Mi primera página funcional, conectada a MySQL sin frameworks, diseñada para una tienda de mangas inspirada en Vagabond. Incluía comentarios, animaciones básicas y varias vistas.</p>
+              <div class="tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span>
               </div>
             </div>
           </div>
-  
-          <div class="mascot-column">
-            <img src="assets/images/gatoLap.png" alt="Gato programando" class="gato-fixed flipped" />
-            <div class="comic-bubble"><span id="typedMascot">Zzz...</span></div>
+
+          <div id="project-responsive" class="detailed-project" data-aos="fade-up" data-hover-text='["No me culpen, estaba leyendo Berserk durante ese semestre"]'>
+            <div class="carousel-container splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><img src="assets/projects/Berserk_1.png" alt="Berserk 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/Berserk_2.png" alt="Berserk 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/Berserk_3.png" alt="Berserk 3" /></li>
+                  <li class="splide__slide"><img src="assets/projects/Berserk_4.png" alt="Berserk 4" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3><span class="highlight">Página web responsive</span></h3>
+              <p>Segundo intento, esta vez enfocado a diseño UX y responsive. Inspirado en Berserk. Trabajé media queries, animaciones, loaders y una experiencia visual oscura.</p>
+              <div class="tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="project-semester" class="detailed-project" data-aos="fade-up" data-hover-text='["¿Cómo que no tengo todo el semestre para hacer la página ?"]'>
+            <div class="carousel-container splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><img src="assets/projects/FX_1.png" alt="FX 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/FX_2.png" alt="FX 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/FX_3.png" alt="FX 3" /></li>
+                  <li class="splide__slide"><img src="assets/projects/FX_4.png" alt="FX 4" /></li>
+                  <li class="splide__slide"><img src="assets/projects/FXE_1.png" alt="FXE 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/FXE_2.png" alt="FXE 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/MI_1.png" alt="MI 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/MI_2.png" alt="MI 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/MI_3.png" alt="MI 3" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3><span class="highlight">Semestre empresarial - Sitios y Rebrandings</span></h3>
+              <p>Cuatro sitios web realizados como parte de un proyecto real. Aprendí a trabajar con diseños existentes y a conectar formularios con bases de datos.</p>
+              <div class="tech-stack">
+                <span>HTML</span><span>Angular</span><span>TypeScript</span><span>Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="project-portfolio" class="detailed-project" data-aos="fade-up" data-hover-text='["Finalmente, lo que yo quiera, ¡Cuándo yo quiera!"]'>
+            <div class="carousel-container splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><img src="assets/projects/Portafolio_1.png" alt="Portafolio 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/Portafolio_2.png" alt="Portafolio 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/Portafolio_3.png" alt="Portafolio 3" /></li>
+                  <li class="splide__slide"><img src="assets/projects/Portafolio_4.png" alt="Portafolio 4" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3><span class="highlight">Portafolio Web</span></h3>
+              <p>Este portafolio en sí es un experimento para probar cosas que me gustan. Está hecho en Angular 18 con SCSS y EmailJS. Todavía lo estoy construyendo mientras lo visitas.</p>
+              <div class="tech-stack">
+                <span>Angular</span><span>SCSS</span><span>EmailJS</span>
+              </div>
+            </div>
           </div>
         </div>
-  
-        <!-- PROYECTOS VIDEOJUEGOS -->
-        <h2 id="game-projects" class="category-title" data-aos="fade-up">Proyectos de Videojuegos</h2>
-  
-        <div class="project-section">
-          <div class="projects-column">
-            <div id="project-3d" class="detailed-project" data-aos="fade-up" data-hover-text='["Soñé con blender durante semanas"]'>
-              <div class="carousel-container splide">
-                <!-- Slides de imágenes -->
-              </div>
-              <div class="project-content">
-                <h3><span class="highlight">Juego 3D - Passing Out Pieces</span></h3>
-                <p>...</p>
-                <div class="tech-stack">
-                  <span>Unity</span><span>C#</span><span>Blender</span>
-                </div>
+
+        <div class="mascot-column">
+          <img src="assets/images/gatoLap.png" alt="Gato programando" class="gato-fixed flipped" />
+          <div class="comic-bubble"><span id="typedMascot">Zzz...</span></div>
+        </div>
+      </div>
+
+      <!-- PROYECTOS VIDEOJUEGOS -->
+      <h2 id="game-projects" class="category-title" data-aos="fade-up">Proyectos de Videojuegos</h2>
+
+      <div class="project-section">
+        <div class="projects-column">
+          <div id="project-3d" class="detailed-project" data-aos="fade-up" data-hover-text='["Soñé con blender durante semanas"]'>
+            <div class="carousel-container splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><img src="assets/projects/POP_1.png" alt="POP 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/POP_2.png" alt="POP 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/POP_3.png" alt="POP 3" /></li>
+                  <li class="splide__slide"><img src="assets/projects/POP_4.png" alt="POP 4" /></li>
+                </ul>
               </div>
             </div>
-  
-            <div id="project-2d" class="detailed-project" data-aos="fade-up" data-hover-text='["No me pregunten como un Roomba puede hacerle daño a alguien"]'>
-              <div class="carousel-container splide">
-                <!-- Slides de imágenes -->
-              </div>
-              <div class="project-content">
-                <h3><span class="highlight">Juego 2D - TimeSaver</span></h3>
-                <p>...</p>
-                <div class="tech-stack">
-                  <span>Unity</span><span>C#</span><span>Pixel Art</span>
-                </div>
+            <div class="project-content">
+              <h3><span class="highlight">Juego 3D - Passing Out Pieces</span></h3>
+              <p>Mi primer acercamiento al 3D. Un juego simple tipo vista isométrica hecho en Unity. Modelado y programado completamente desde cero.</p>
+              <div class="tech-stack">
+                <span>Unity</span><span>C#</span><span>Blender</span>
               </div>
             </div>
           </div>
-  
-          <div class="mascot-column">
-            <!-- Gato reutilizado si se desea -->
+
+          <div id="project-2d" class="detailed-project" data-aos="fade-up" data-hover-text='["No me pregunten como un Roomba puede hacerle daño a alguien"]'>
+            <div class="carousel-container splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><img src="assets/projects/TS_1.png" alt="TS 1" /></li>
+                  <li class="splide__slide"><img src="assets/projects/TS_2.png" alt="TS 2" /></li>
+                  <li class="splide__slide"><img src="assets/projects/TS_3.png" alt="TS 3" /></li>
+                  <li class="splide__slide"><img src="assets/projects/TS_4.png" alt="TS 4" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-content">
+              
+              <h3><span class="highlight">Juego 2D - TimeSaver</span></h3>
+              <p>Juego de plataformas en blanco y negro inspirado en SallyFace. Incluye enemigos, monedas, menús y escenarios. Fue el proyecto que más disfruté hacer.</p>
+              <button class="back-home-btn" [routerLink]="['/game', 'timesaver']">
+                ¡Pruébame!
+              </button>
+              
+              <div class="tech-stack">
+                <span>Unity</span><span>C#</span><span>Animación 2D</span>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="mascot-column">
+          <!-- Gato reutilizado si se desea -->
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

@@ -6,7 +6,7 @@
                     *ngFor="let proyecto of proyectos"
                     class="splide__slide"
                     (click)="irADetalle(proyecto.fragment)"
-                    style="cursor: pointer;">
+                    style="cursor: pointer; text-align: center">
                     <img [src]="proyecto.imagen" [alt]="proyecto.nombre"
                         class="carousel-image" />
                     <h3>{{ proyecto.nombre }}</h3>

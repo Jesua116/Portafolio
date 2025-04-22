@@ -15,9 +15,9 @@
   </div>
 </section>
 <div id="about">
-<app-timeline></app-timeline>
+  <app-timeline></app-timeline>
 
-<app-skills></app-skills>
+  <app-skills></app-skills>
 </div>
 <!-- Sección FEATURED PROJECTS -->
 <section id="featured" class="featured-section" data-aos="fade-up">
@@ -27,7 +27,8 @@
       Un vistazo rápido a mis principales creaciones e ideas.
       ¡Descubre también mis demos de videojuegos!
     </p>
-    <button class="btn-see-all" [routerLink]="['/projects']" data-aos="zoom-in" data-aos-delay="200">
+    <button class="btn-see-all" [routerLink]="['/projects']" data-aos="zoom-in"
+      data-aos-delay="200">
       Ver todos los proyectos
     </button>
   </div>
@@ -37,9 +38,8 @@
   </div>
 </section>
 
-
 <div id="contact">
-<app-contact></app-contact>
+  <app-contact></app-contact>
 </div>
 <!-- FOOTER -->
 <footer class="footer-section">
@@ -63,17 +63,39 @@
   <div class="footer-col">
     <h4>Projects</h4>
     <ul>
-      <li><a href="#web-project">Web Project</a></li>
-      <li><a href="#">Game Projects</a></li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="web-projects">Web Projects</a>
+      </li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="game-projects">Game
+          Projects</a>
+      </li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="portafolio">Portafolio Web</a>
+      </li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="project-semester">Sitios
+          Semestrales</a>
+      </li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="project-db">BD - Wandering
+          Blade</a>
+      </li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="project-responsive">Berserk
+          Rediseño</a>
+      </li>
+
     </ul>
   </div>
 
   <div class="footer-col">
     <h4>Game</h4>
-    <!-- Algún link, si procede -->
     <ul>
-      <li><a href="#">Link1</a></li>
-      <li><a href="#">Link2</a></li>
+      <li><a [routerLink]="['/projects']" fragment="project-2d">Juego 2D</a></li>
+      <li>
+        <a [routerLink]="['/projects']" fragment="project-3d">Juego 3D</a>
+      </li>
     </ul>
   </div>
 

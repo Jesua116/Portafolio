@@ -1,9 +1,8 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Splide from '@splidejs/splide';
-import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
-
+import { Router, ActivatedRoute } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-project-carousel',
@@ -11,65 +10,75 @@ import { ActivatedRoute } from '@angular/router';
   imports: [CommonModule],
   standalone: true,
   styleUrls: ['./project-carousel.component.css']
-  
 })
-export class ProjectCarouselComponent implements AfterViewInit {
-
+export class ProjectCarouselComponent implements AfterViewChecked {
   constructor(private router: Router, private route: ActivatedRoute) {}
-  
+
+  private splideMounted = false;
+
   proyectos = [
     {
       nombre: 'Portafolio Web',
       imagen: 'assets/projects/Portafolio_1.png',
-      fragment: 'portafolio'
+      fragment: 'project-portfolio'
     },
     {
       nombre: 'Juego Timesaver',
       imagen: 'assets/projects/TS_1.png',
-      fragment: 'timesaver'
+      fragment: 'project-2d'
     },
     {
       nombre: 'Juego Passing Out Pieces',
       imagen: 'assets/projects/POP_1.png',
-      fragment: 'timesaver'
+      fragment: 'project-3d'
     },
     {
       nombre: 'Landing pages',
       imagen: 'assets/projects/FX_1.png',
-      fragment: 'inversiones'
+      fragment: 'project-semester'
     },
     {
-      nombre: 'Pagina web',
+      nombre: 'Página Web Responsive',
       imagen: 'assets/projects/Berserk_1.png',
-      fragment: 'pagina web'
+      fragment: 'project-responsive'
     },
     {
-      nombre: 'Pagina web',
+      nombre: 'Página Web con Base de Datos',
       imagen: 'assets/projects/WanderingBlade_1.png',
-      fragment: 'pagina web'
+      fragment: 'project-db'
     }
   ];
-  
 
-  ngAfterViewInit(): void {
-    new Splide('.splide', {
-      type: 'loop',
-      perPage: 3,
-      gap: '2rem',
-      autoplay: true,
-      pauseOnHover: true,
-      arrows: true,
-      pagination: true,
-    }).mount();
+  ngAfterViewChecked(): void {
+    if (!this.splideMounted) {
+      const slider = document.querySelector('.splide') as HTMLElement | null;
+      if (slider) {
+        new Splide(slider, {
+          type: 'loop',
+          perPage: 3,
+          gap: '2rem',
+          autoplay: true,
+          pauseOnHover: true,
+          arrows: true,
+          pagination: true,
+        }).mount();
 
-    this.route.fragment.subscribe(fragment => {
-      if (fragment) {
-        const el = document.getElementById(fragment);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
+        this.splideMounted = true;
+
+        requestAnimationFrame(() => {
+          const hash = window.location.hash;
+          if (hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          } else {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+          }
+          AOS.refreshHard?.();
+        });
       }
-    });
+    }
   }
 
   irADetalle(fragmento: string) {

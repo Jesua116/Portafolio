@@ -7,6 +7,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   background-color: #000; /* Si quieres que toda la página sea negra */
+
 }
 
 body {
@@ -103,5 +104,27 @@ body {
       transform: translateY(-20px);
     }
   }
+
+  .back-home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #000;
+    border: 2px solid #007bff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  .back-home-btn:hover {
+    box-shadow: 0 0 15px #007bff;
+    transform: scale(1.05);
+  }
+  
   
   

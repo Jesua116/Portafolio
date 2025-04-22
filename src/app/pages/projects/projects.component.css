@@ -187,8 +187,27 @@
   }
 }
 
+
 @keyframes floaty {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-8px); }
   100% { transform: translateY(0); }
+}
+
+.try-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #007bff77;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.try-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #007bffaa;
 }
