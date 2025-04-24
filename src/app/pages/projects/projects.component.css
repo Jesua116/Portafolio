@@ -50,6 +50,7 @@
   position: sticky;
   top: 100px;
   height: 400px;
+  z-index: 99;
 }
 
 .gato-fixed {

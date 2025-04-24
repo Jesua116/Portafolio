@@ -271,26 +271,28 @@ body {
 
 .btn-see-all:hover {
   background-color: #0036cc;
-  /* Azul más profundo al pasar el cursor */
 }
 
-/* Imagen destacada */
+
 .featured-image {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
+
 
 .featured-image img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 70, 255, 0.2);
-  /* Sombra azul suave */
+  box-shadow: 0 0 20px rgba(0, 70, 255, .2);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .featured-section {
     padding: 3rem 1.2rem;
@@ -384,3 +386,4 @@ body {
     text-align: center;
   }
 }
+

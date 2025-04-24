@@ -1,13 +1,21 @@
 <!-- game-viewer.component.html -->
 <div class="game-container">
-    <!-- <h1 class="game-title">Juego: TimeSaver</h1> -->
-    <button class="back-home-btn" (click)="volverAProjects()"> ← </button>
+  <button class="back-home-btn" (click)="volverAProjects()"> ← </button>
+
+  <div class="monitor-container">
     <iframe
       [src]="safeUrl"
-      width="100%"
-      height="100%"
+      class="unity-frame"
       frameborder="0"
       allowfullscreen
     ></iframe>
+
+    <!-- <img
+      src="../../../assets/images/pantalla_2d.png"
+      alt="Monitor Frame"
+      class="monitor-frame"
+    /> -->
   </div>
-  
+</div>
+
+

@@ -14,7 +14,6 @@
 
 .splide__slide {
   border-radius: 12px;
-  /* overflow: hidden; */
   transition: transform 0.3s, box-shadow 0.3s;
   background: #111;
   text-align: center;
@@ -22,14 +21,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-height: 00%;
+  max-height: 100%;
 }
 
 .carousel-image {
   width: 100%;
   height: auto;
   max-height: 280px;
-  /* object-fit: contain; */
   display: block;
   box-shadow: 0 0 15px #00000077;
   margin: 0 auto;
